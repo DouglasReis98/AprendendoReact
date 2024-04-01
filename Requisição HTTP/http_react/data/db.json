@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": "3",
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "id": "4",
+      "name": "Sapato",
+      "price": "60"
+    },
+    {
+      "id": "5a50",
+      "name": "Cordão Prata",
+      "price": "560"
+    },
+    {
+      "id": "3f09",
+      "name": "Limpa Cordas",
+      "price": "60"
+    },
+    {
+      "id": "bacc",
+      "name": "Teclado",
+      "price": "110"
+    },
+    {
+      "id": "d2a3",
+      "name": "Monitor",
+      "price": "560"
+    },
+    {
+      "id": "f9d7",
+      "name": "Mouse",
+      "price": "60"
+    },
+    {
+      "id": "a11e",
+      "name": "Capa monitor",
+      "price": "100"
+    },
+    {
+      "id": "44de",
+      "name": "bloco anotações",
+      "price": "15"
+    },
+    {
+      "id": "a79c",
+      "name": "Microfone",
+      "price": "400"
+    },
+    {
+      "id": "3a3e",
+      "name": "Suporte Microfone",
+      "price": "120"
+    }
+  ]
+}

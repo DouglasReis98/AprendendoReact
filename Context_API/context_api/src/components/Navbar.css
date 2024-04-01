@@ -1,0 +1,16 @@
+ul{
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    color: #000;
+}
+
+nav a:hover{
+    color: #ccc
+}
+
+.active{
+    background-color: #000;
+    color: #fff;
+}

@@ -101,7 +101,7 @@ textarea {
 }
 
 button[disabled] {
-  background-color: #AAA;
+  background-color: #aaa;
 }
 
 .container .error {

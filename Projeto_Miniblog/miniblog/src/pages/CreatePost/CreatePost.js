@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './CreatePost.module.css'
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"
+//import { useNavigate } from "react-router-dom"
 import { useAuthValue } from "../../context/AuthContext"
 import { useInsertDocument } from '../../hooks/useInsertDocument';
 
@@ -26,7 +26,16 @@ const CreatePost = () => {
     // criar o array de tags
 
     // checar todos os valores
-
+/*
+    console.log({
+      title,
+      image,
+      body,
+      tags,
+      uid: user.uid,
+      createdBy: user.displayName
+    })
+    */
     insertDocument({
       title,
       image,

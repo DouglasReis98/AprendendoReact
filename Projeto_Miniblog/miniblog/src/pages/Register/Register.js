@@ -61,7 +61,7 @@ const Register = () => {
                 <span>E-mail:</span>
                 <input 
                     type="email" 
-                    name="displayName" 
+                    name="email" 
                     placeholder="E-mail do usuário"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} 

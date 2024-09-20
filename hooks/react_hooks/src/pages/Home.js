@@ -3,11 +3,14 @@ import HookUseState from '../components/HookUseState'
 import HookUseReducer from '../components/HookUseReducer'
 import HookUseEffect from '../components/HookUseEffect'
 import HookUseRef from '../components/HookUseRef';
+import HookUseCallback from '../components/HookUseCallback';
+import HookUseMemo from '../components/HookUseMemo';
+import HookUseLayoutEffect from '../components/HookUseLayoutEffect';
 
 // useContext
 import { useContext } from "react";
 import { SomeContext } from '../components/HookUseContext';
-import HookUseCallback from '../components/HookUseCallback';
+import HookUseImperativeHandle from '../components/HookUseImperativeHandle';
 
 const Home = () => {
 
@@ -23,6 +26,9 @@ const Home = () => {
         <hr />
         <HookUseRef/>
         <HookUseCallback />
+        <HookUseMemo />
+        <HookUseLayoutEffect />
+        <HookUseImperativeHandle />
     </div>
   )
 }

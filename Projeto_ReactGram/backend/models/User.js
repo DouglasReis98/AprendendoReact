@@ -6,7 +6,7 @@ const {Schema} = mongoose;
     email: String,
     password: String,
     profileImage: String,
-    blo: String,
+    bio: String,
  },{
     timestamps: true
  }

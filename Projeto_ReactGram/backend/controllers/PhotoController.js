@@ -1,5 +1,7 @@
 const Photo = require("../models/Photo");
 const User = require("../models/User");
+const mongoose = require("mongoose")
+
 
 // Insert a photo, with an user related to it
 const insertPhoto = async (req, res) => {
@@ -37,11 +39,12 @@ const deletePhoto = async (req, res) => {
   const reqUser = req.user;
 
   try {
-    const photo = await Photo.findById(id);
+    const photo = await Photo.findById(new mongoose.Types.ObjectId(id));
+    ;
 
     // Check if photo exists
     if (!photo) {
-      console.log(id);
+      console.log(photo) // AQUI ESTÁ RETORNANDO NULL
       res.status(404).json({ errors: ["Foto não encontrada"] });
       return;
     }

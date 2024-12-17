@@ -1,6 +1,5 @@
 const Photo = require("../models/Photo");
 const User = require("../models/User");
-const mongoose = require("mongoose")
 
 // Insert a photo, with an user related to it
 const insertPhoto = async (req, res) => {
@@ -43,7 +42,6 @@ const deletePhoto = async (req, res) => {
 
     // Check if photo exists
     if (!photo) {
-      console.log("OI " + photo) // AQUI ESTÁ RETORNANDO NULL
       res.status(404).json({ errors: ["Foto não encontrada"] });
       return;
     }
@@ -66,7 +64,17 @@ const deletePhoto = async (req, res) => {
   }
 };
 
+// Get all photos
+const getAllPhotos = async (req,res) => {
+
+  const photos = await Photo.find({}).sort([["createdAt", -1]]).exec();
+
+  return res.status(200).json(photos)
+
+}
+
 module.exports = {
   insertPhoto,
   deletePhoto,
+  getAllPhotos
 };

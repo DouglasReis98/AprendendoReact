@@ -2,7 +2,6 @@ const Photo = require("../models/Photo");
 const User = require("../models/User");
 const mongoose = require("mongoose")
 
-
 // Insert a photo, with an user related to it
 const insertPhoto = async (req, res) => {
   const { title } = req.body;
@@ -38,13 +37,13 @@ const deletePhoto = async (req, res) => {
 
   const reqUser = req.user;
 
+  console.log("Este é o ID: " + id)
   try {
-    const photo = await Photo.findById(new mongoose.Types.ObjectId(id));
-    ;
+    const photo = await Photo.findById(id);
 
     // Check if photo exists
     if (!photo) {
-      console.log(photo) // AQUI ESTÁ RETORNANDO NULL
+      console.log("OI " + photo) // AQUI ESTÁ RETORNANDO NULL
       res.status(404).json({ errors: ["Foto não encontrada"] });
       return;
     }
@@ -60,7 +59,7 @@ const deletePhoto = async (req, res) => {
 
     res
       .status(200)
-      .json({ id: photo_id, message: "Foto excluída com sucesso." });
+      .json({ id: photo._id, message: "Foto excluída com sucesso." });
   } catch (error) {
     console.log(error);
     res.status(404).json({ errors: "Foto Não Encontrada." });

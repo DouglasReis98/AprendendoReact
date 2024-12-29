@@ -1,9 +1,13 @@
 import "./Auth.css";
 // Components
 import { Link } from "react-router-dom";
-import { React, useState, useEffect } from "react";
 
 // Hooks
+import { React, useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+// Redux
+import { register, reset } from "../../slices/authSlice";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -11,21 +15,28 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const dispatch = useDispatch();
+
+  const { loading, error } = useSelector((state) => state.auth);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const user = {
-    name,
-    email,
-    password,
-    confirmPassword,
-  };
-  console.log(user);
+      name,
+      email,
+      password,
+      confirmPassword,
+    };
+    console.log(user);
+
+    dispatch(register(user))
   };
 
-  
-
-  
+// Clean all of states
+  useEffect(() => {
+    dispatch(reset());
+  }, [dispatch])
 
   return (
     <div id="register">

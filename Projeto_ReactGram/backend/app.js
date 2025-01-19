@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(cors({credentials: true, origin: "http://localhost:5173"}))
 
 // Upload directory
-app.use("/upload", express.static(path.join(__dirname, "/uploads")));
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 // DB Connection
 require("./config/db.js");
